@@ -22,7 +22,7 @@
  */
 function getIntervalArray(start, end) {
   const arrLength = end - start + 1;
-  return Array.from({ length: arrLength }, (_, i) => start + i);
+  return Array.from({ length: arrLength }, (v, i) => start + i);
 }
 
 /**
@@ -42,7 +42,7 @@ function sumArrays(arr1, arr2) {
   const maxLengthArrays = Math.max(arr1.length, arr2.length);
   return Array.from(
     { length: maxLengthArrays },
-    (_, i) => (arr1[i] || 0) + (arr2[i] || 0)
+    (v, i) => (arr1[i] || 0) + (arr2[i] || 0)
   );
 }
 
@@ -371,7 +371,7 @@ function createChunks(arr, chunkSize) {
  *    generateOdds(5) => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  return Array.from({ length: len }, (_, k) => 2 * k + 1);
+  return Array.from({ length: len }, (v, k) => 2 * k + 1);
 }
 
 /**
